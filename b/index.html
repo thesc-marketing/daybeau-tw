@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}
 
 /* 대표 이미지 */
 .visual{position:relative;aspect-ratio:4/5;background:#2a2622;overflow:hidden}
-.visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.62) 0%,rgba(18,16,14,0) 52%)}
+.visual .copy,.visual .ai{display:none}
 .visual img{width:100%;height:100%;object-fit:cover;object-position:center 62%}
 .visual .copy{position:absolute;left:20px;right:20px;top:22px;z-index:2}
 .visual .pill{display:inline-block;background:rgba(255,255,255,.18);color:#fff;backdrop-filter:blur(4px);font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
@@ -106,10 +106,10 @@ footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
 </head>
 <body><div style="position:relative;z-index:99;background:#111;color:#fff;text-align:center;font:700 13px/1.4 sans-serif;padding:7px 10px">검토용 초안 · 실제 광고에 쓰기 전 · AI 예시 이미지 포함</div>
 <div class="wrap">
-<header class="top"><b>DAYBEAU</b><span>明洞旗艦店 · 初訪優惠</span></header>
+<header class="top"><img src="../img/logo.png" alt="DayBeau Clinic" style="height:28px;width:auto"><span>明洞旗艦店 · 初訪優惠</span></header>
 
 <div class="visual">
-  <img id="v-img" src="../img/tw4.jpg" alt="">
+  <img id="v-img" src="../img/hero_lift.jpg" alt="">
   <div class="copy">
     <span class="pill" id="v-pill">首爾明洞 初訪限定</span>
     <h1 id="v-h1">綁起高馬尾的時候，<br>下顎線還在嗎？</h1>
@@ -189,7 +189,7 @@ footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
 const LINE_URL = "";
 const D = {
   lift:{
-    img:"../img/tw4.jpg", pos:"70% 30%", pill:"首爾明洞 初訪限定", h1:"綁起高馬尾的時候，<br>下顎線還在嗎？", big:"99萬",
+    img:"../img/hero_lift.jpg", pos:"center", pill:"首爾明洞 初訪限定", h1:"綁起高馬尾的時候，<br>下顎線還在嗎？", big:"99萬",
     name:"[初訪限定] ONDA 40KJ ＋ 美國極線音波 300發", short:"ONDA 40KJ＋美國極線音波 300發",
     now:"990,000", was:"1,950,000韓元", twd:"約 NT$24,100", cond:"",
     worry:["下顎線變模糊、臉頰開始往下掉","想一次做好深層拉提和臉部緊緻","趁來首爾旅行，想做一次像樣的拉提"],
@@ -198,7 +198,7 @@ const D = {
     extra:""
   },
   onda:{
-    img:"../img/tw1.jpg", pos:"center 30%", pill:"ONDA 微波拉提 初訪限定", h1:"臉頰肉肉的，<br>拍照總要找側臉？", big:"3.9萬",
+    img:"../img/hero_onda.jpg", pos:"center", pill:"ONDA 微波拉提 初訪限定", h1:"臉頰肉肉的，<br>拍照總要找側臉？", big:"3.9萬",
     name:"[初訪限定] ONDA 微波拉提 10KJ", short:"ONDA 微波拉提 10KJ",
     now:"39,000", was:"77,000韓元", twd:"約 NT$950",
     cond:"優惠價最多可加購至30KJ（30KJ＝117,000韓元）<br>超過30KJ的部分以原價計算（每10KJ 77,000韓元）",
@@ -208,7 +208,7 @@ const D = {
     extra:"・ONDA 優惠價最多適用至30KJ，超過部分以原價（每10KJ 77,000韓元）計算<br>"
   },
   potenza:{
-    img:"../img/tw5.jpg", pos:"60% 30%", pill:"毛孔・膚質 初訪限定", h1:"毛孔大到<br>上妝會卡粉？", big:"19萬",
+    img:"../img/hero_potenza.jpg", pos:"center", pill:"毛孔・膚質 初訪限定", h1:"毛孔大到<br>上妝會卡粉？", big:"19萬",
     name:"[初訪限定] 黃金微針 N探頭 ＋ JUVELOOK水光 2CC", short:"黃金微針 N探頭＋JUVELOOK水光 2CC",
     now:"190,000", was:"370,000韓元", twd:"約 NT$4,600・探頭費用已包含", cond:"",
     worry:["毛孔粗大、膚質不平滑","上妝容易卡粉、皮膚沒有光澤","旅行中想好好做一次膚質管理"],

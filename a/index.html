@@ -7,7 +7,7 @@
 <meta name="description" content="首爾明洞 DAYBEAU 皮膚科・乙支路入口站6號出口。1人獨立療程室、醫師親自諮詢、中文LINE諮詢。ONDA+美國極線音波300發 990,000韓元。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#f4f5f6; --paper:#fff; --ink:#1c1e21; --body:#3d4248; --sub:#7a8189; --line:#e3e6e9;
@@ -25,7 +25,7 @@ a{color:inherit;text-decoration:none}
 /* 상단 바 */
 .top{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;height:54px;padding:0 16px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .logo{font-family:var(--serif);font-weight:700;letter-spacing:.14em;color:var(--ink);font-size:17px;line-height:1}
-.logo small{display:block;font-family:var(--sans);font-weight:500;letter-spacing:.08em;font-size:10.5px;color:var(--sub);margin-top:4px}
+.logo small{display:block;font-family:var(--sans);font-weight:500;letter-spacing:.08em;font-size:10px;color:var(--sub);margin-top:2px}
 .nav{display:flex;gap:14px;font-size:13px;color:var(--body)}
 .nav a:last-child{color:var(--orange);font-weight:700}
 
@@ -68,6 +68,18 @@ h2{font-family:var(--serif);font-size:24px;line-height:1.4;color:var(--ink);marg
 .cond b{color:var(--ink)}
 .notes{margin-top:14px;font-size:12px;color:var(--sub);line-height:1.8}
 
+/* 데이뷰 대만식 혜택 블록 */
+.benefit{margin-top:18px;border-radius:16px;padding:26px 16px 20px;text-align:center;color:#f6ecde;background:radial-gradient(120% 70% at 20% 0%,#9a8270 0%,rgba(154,130,112,0) 60%),linear-gradient(180deg,#3a3029,#6e5c4f)}
+.benefit .bl{height:34px;width:auto;margin:0 auto}
+.benefit .bt{font-family:"Playfair Display",var(--serif);font-weight:700;font-size:40px;line-height:1.02;margin-top:12px;letter-spacing:.01em}
+.benefit .bs{font-family:var(--serif);font-size:13px;color:#e2ccaa;margin:10px 0 14px}
+.arch{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:10px;padding:12px 18px 12px 22px;border-radius:999px;background:linear-gradient(90deg,#f0e8dc,#d6c6b0);color:#3a2c22;text-align:left;box-shadow:0 6px 14px rgba(20,14,10,.25)}
+.arch b{display:block;font-size:13.5px;line-height:1.35}
+.arch span{display:block;font-size:11.5px;color:#6a5444}
+.arch s{font-size:11.5px;color:#8a7260}
+.arch em{font-style:normal;font-family:"Playfair Display",serif;font-weight:700;font-size:26px;white-space:nowrap}
+.arch em small{font-family:var(--sans);font-size:14px;margin-right:2px}
+.benefit .bf{font-size:11px;color:#dccab2;margin-top:14px}
 /* 가격표 */
 .menu{background:var(--paper);border-radius:14px;border:1px solid var(--line);margin-top:16px}
 .menu li{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
@@ -135,7 +147,7 @@ footer b{color:var(--body)}
 <div class="wrap">
 
 <header class="top">
-  <div class="logo">DAYBEAU<small>明洞旗艦店 · SEOUL</small></div>
+  <div class="logo"><img src="../img/logo.png" alt="DayBeau Clinic" style="height:30px;width:auto;display:block"><small>明洞旗艦店 · SEOUL</small></div>
   <nav class="nav"><a href="#event">優惠</a><a href="#doctor">醫師</a><a href="#map">交通</a><a href="#" data-line>LINE</a></nav>
 </header>
 
@@ -154,6 +166,15 @@ footer b{color:var(--body)}
   <div class="eyebrow">FIRST VISIT</div>
   <h2>明洞旗艦店 初訪人氣組合</h2>
   <p class="lead">第一次來 DAYBEAU 明洞旗艦店的顧客限定</p>
+  <div class="benefit">
+    <img src="../img/logo_light.png" alt="" class="bl">
+    <div class="bt">FIRST VISIT<br>BENEFIT</div>
+    <div class="bs">明洞旗艦店・初訪限定</div>
+    <div class="arch"><div><b>美國極線音波300發＋ONDA 40KJ</b><s>₩1,950,000</s></div><em><small>₩</small>990,000</em></div>
+    <div class="arch"><div><b>ONDA 10KJ</b><span>最多加購至30KJ</span><s>₩77,000</s></div><em><small>₩</small>39,000</em></div>
+    <div class="arch"><div><b>黃金微針N探頭＋JUVELOOK 2CC</b><span>探頭費用已包含</span><s>₩370,000</s></div><em><small>₩</small>190,000</em></div>
+    <div class="bf">價格不含10%附加稅・初訪限定每人一次</div>
+  </div>
   <div class="period"><span>初訪優惠・每人限購一次</span><b>所有價格不含10%附加稅</b></div>
 
   <article class="deal">
