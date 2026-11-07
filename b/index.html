@@ -7,7 +7,7 @@
 <meta name="description" content="首爾明洞 DAYBEAU 初訪優惠：ONDA 40KJ＋美國極線音波300發 990,000韓元、ONDA 10KJ 39,000韓元、黃金微針＋JUVELOOK 2CC 190,000韓元。中文LINE諮詢。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#fff; --soft:#f5f6f7; --ink:#191b1e; --body:#40464d; --sub:#868d95; --line:#eceef0;
@@ -24,14 +24,15 @@ a{color:inherit;text-decoration:none}
 .top span{font-size:12px;color:var(--sub)}
 
 /* 대표 이미지 */
-.visual{position:relative;aspect-ratio:1/1;background:var(--soft);overflow:hidden}
+.visual{position:relative;aspect-ratio:4/5;background:#2a2622;overflow:hidden}
+.visual::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(18,16,14,.62) 0%,rgba(18,16,14,0) 52%)}
 .visual img{width:100%;height:100%;object-fit:cover;object-position:center 62%}
-.visual .copy{position:absolute;left:20px;right:20px;top:22px}
-.visual .pill{display:inline-block;background:var(--ink);color:#fff;font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
-.visual h1{margin-top:10px;font-size:30px;font-weight:900;line-height:1.25;color:var(--ink);letter-spacing:-.02em}
-.visual .big{margin-top:6px;font-size:40px;font-weight:900;color:var(--accent);letter-spacing:-.03em;line-height:1}
+.visual .copy{position:absolute;left:20px;right:20px;top:22px;z-index:2}
+.visual .pill{display:inline-block;background:rgba(255,255,255,.18);color:#fff;backdrop-filter:blur(4px);font-size:12px;font-weight:700;border-radius:999px;padding:3px 10px}
+.visual h1{margin-top:12px;font-family:"Noto Serif TC",serif;font-size:29px;font-weight:700;line-height:1.38;color:#fff;letter-spacing:0}
+.visual .big{margin-top:8px;font-size:40px;font-weight:900;color:#f4d9b8;letter-spacing:-.03em;line-height:1}
 .visual .big small{font-size:18px;margin-left:2px}
-.visual .ai{position:absolute;right:10px;bottom:8px;font-size:10px;color:rgba(0,0,0,.45)}
+.visual .ai{position:absolute;right:10px;bottom:8px;font-size:10px;color:rgba(255,255,255,.7);z-index:2}
 
 .head{padding:18px 20px 20px;border-bottom:8px solid var(--soft)}
 .clinic{font-size:13px;color:var(--sub)}
@@ -108,10 +109,10 @@ footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
 <header class="top"><b>DAYBEAU</b><span>明洞旗艦店 · 初訪優惠</span></header>
 
 <div class="visual">
-  <img id="v-img" src="../img/lift.jpg" alt="">
+  <img id="v-img" src="../img/tw4.jpg" alt="">
   <div class="copy">
-    <span class="pill" id="v-pill">明洞拉提 初訪限定</span>
-    <h1 id="v-h1">音波拉提＋ONDA<br>一次做好輪廓</h1>
+    <span class="pill" id="v-pill">首爾明洞 初訪限定</span>
+    <h1 id="v-h1">綁起高馬尾的時候，<br>下顎線還在嗎？</h1>
     <div class="big" id="v-big">99萬<small>韓元</small></div>
   </div>
   <span class="ai">AI生成示意圖</span>
@@ -156,7 +157,7 @@ footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
 <div class="sec">
   <h3>醫院資訊</h3>
   <div class="place">
-    <img src="../img/f4.jpg" alt="" loading="lazy">
+    <img src="../img/hd021.jpg" alt="" loading="lazy">
     <div><b>DAYBEAU 明洞旗艦店</b>
       <p>首爾市中區南大門路84 Hyde Park大樓 B1<br>乙支路入口站 6號出口 步行約2分鐘<br>週一～五 10:00–20:00・週六日 10:00–19:00</p></div>
   </div>
@@ -171,7 +172,7 @@ footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
 
 <div class="sec" style="border-bottom:0">
   <h3>注意事項</h3>
-  <p class="notes">・初訪優惠每人限購一次，不得與月優惠、常態優惠重複使用<br>・所有價格不含10%附加稅，以韓元結帳；新台幣以 1 TWD ≈ 44 韓元換算，僅供參考<br><span id="n-extra"></span>・實際療程內容依醫師面診結果決定，效果與恢復期因人而異<br>・療程後可能出現暫時性紅腫、瘀青、刺痛等反應</p>
+  <p class="notes">・初訪優惠每人限購一次，不得與月優惠、常態優惠重複使用<br>・所有價格不含10%附加稅，以韓元結帳；新台幣以 1 TWD ≈ 41 韓元換算，僅供參考<br><span id="n-extra"></span>・實際療程內容依醫師面診結果決定，效果與恢復期因人而異<br>・療程後可能出現暫時性紅腫、瘀青、刺痛等反應</p>
 </div>
 
 <footer>데이뷰의원 - 명동 시그니처점｜代表 김현지｜事業者登錄號碼 771-10-03054<br>서울 중구 남대문로 84 하이드파크 건물 지하 1층<br>部分人物圖片為AI生成示意圖，非實際顧客</footer>
@@ -188,30 +189,30 @@ footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
 const LINE_URL = "";
 const D = {
   lift:{
-    img:"../img/lift.jpg", pill:"明洞拉提 初訪限定", h1:"音波拉提＋ONDA<br>一次做好輪廓", big:"99萬",
+    img:"../img/tw4.jpg", pos:"70% 30%", pill:"首爾明洞 初訪限定", h1:"綁起高馬尾的時候，<br>下顎線還在嗎？", big:"99萬",
     name:"[初訪限定] ONDA 40KJ ＋ 美國極線音波 300發", short:"ONDA 40KJ＋美國極線音波 300發",
-    now:"990,000", was:"1,950,000韓元", twd:"約 NT$22,500", cond:"",
+    now:"990,000", was:"1,950,000韓元", twd:"約 NT$24,100", cond:"",
     worry:["下顎線變模糊、臉頰開始往下掉","想一次做好深層拉提和臉部緊緻","趁來首爾旅行，想做一次像樣的拉提"],
-    ah:"美國極線音波 × ONDA 微波", aimg:"../img/treat.jpg",
+    ah:"美國極線音波 × ONDA 微波", aimg:"../img/consult.jpg",
     ap:"美國極線音波以聚焦超音波作用在深層，負責「拉」；ONDA 以微波作用在臉頰脂肪層，負責「緊」。兩種原理不同的拉提一次完成，是明洞旗艦店的人氣初訪組合。",
     extra:""
   },
   onda:{
-    img:"../img/onda.jpg", pill:"ONDA 微波拉提 初訪限定", h1:"ONDA 10KJ<br>先試試看", big:"3.9萬",
+    img:"../img/tw1.jpg", pos:"center 30%", pill:"ONDA 微波拉提 初訪限定", h1:"臉頰肉肉的，<br>拍照總要找側臉？", big:"3.9萬",
     name:"[初訪限定] ONDA 微波拉提 10KJ", short:"ONDA 微波拉提 10KJ",
-    now:"39,000", was:"77,000韓元", twd:"約 NT$890",
+    now:"39,000", was:"77,000韓元", twd:"約 NT$950",
     cond:"優惠價最多可加購至30KJ（30KJ＝117,000韓元）<br>超過30KJ的部分以原價計算（每10KJ 77,000韓元）",
     worry:["臉頰肉多、輪廓看起來不夠俐落","第一次做拉提，想先從小劑量開始","不想要太長的恢復期"],
-    ah:"ONDA 微波拉提", aimg:"../img/onda.jpg",
+    ah:"ONDA 微波拉提", aimg:"../img/consult.jpg",
     ap:"ONDA 以微波能量作用在臉頰脂肪層，幫助改善鬆弛、讓輪廓更緊緻。初訪可用 10KJ 39,000韓元開始，最多加購到 30KJ 都是優惠價；需要幾KJ，醫師面診時會依臉型建議。",
     extra:"・ONDA 優惠價最多適用至30KJ，超過部分以原價（每10KJ 77,000韓元）計算<br>"
   },
   potenza:{
-    img:"../img/glow.jpg", pill:"毛孔・膚質 初訪限定", h1:"黃金微針＋JUVELOOK<br>毛孔和光澤一起", big:"19萬",
+    img:"../img/tw5.jpg", pos:"60% 30%", pill:"毛孔・膚質 初訪限定", h1:"毛孔大到<br>上妝會卡粉？", big:"19萬",
     name:"[初訪限定] 黃金微針 N探頭 ＋ JUVELOOK水光 2CC", short:"黃金微針 N探頭＋JUVELOOK水光 2CC",
-    now:"190,000", was:"370,000韓元", twd:"約 NT$4,300・探頭費用已包含", cond:"",
+    now:"190,000", was:"370,000韓元", twd:"約 NT$4,600・探頭費用已包含", cond:"",
     worry:["毛孔粗大、膚質不平滑","上妝容易卡粉、皮膚沒有光澤","旅行中想好好做一次膚質管理"],
-    ah:"黃金微針 × JUVELOOK 水光", aimg:"../img/glow.jpg",
+    ah:"黃金微針 × JUVELOOK 水光", aimg:"../img/tw6.jpg",
     ap:"黃金微針將射頻能量導入真皮層，改善毛孔與膚質；療程後馬上搭配 JUVELOOK 水光 2CC，補足肌膚的彈潤與光澤。探頭費用已包含在優惠價內。",
     extra:""
   }
@@ -224,7 +225,7 @@ const $ = id => document.getElementById(id);
 function render(k, top){
   const d = D[k]; cur = k;
   if(top){
-    $("v-img").src=d.img; $("v-pill").textContent=d.pill; $("v-h1").innerHTML=d.h1; $("v-big").innerHTML=d.big+"<small>韓元</small>";
+    $("v-img").src=d.img; $("v-img").style.objectPosition=d.pos||"center"; $("v-pill").textContent=d.pill; $("v-h1").innerHTML=d.h1; $("v-big").innerHTML=d.big+"<small>韓元</small>";
     $("worry").innerHTML=d.worry.map(w=>"<li>"+w+"</li>").join("");
     $("a-h").textContent=d.ah; $("a-img").src=d.aimg; $("a-p").textContent=d.ap; $("n-extra").innerHTML=d.extra;
   }
