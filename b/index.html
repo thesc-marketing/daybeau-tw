@@ -92,6 +92,17 @@ a{color:inherit;text-decoration:none}
 .more div{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:13px;color:var(--ink)}
 .more div b{display:block;color:var(--accent);font-size:15px}
 
+/* 11/8 Claude: PRIA 「WHY PRiA」(164일) 이유 카드 + Dcard 걱정 FAQ */
+.why{margin-top:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.why div{background:var(--soft);border-radius:12px;overflow:hidden}
+.why img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.why p{padding:10px 12px 12px;font-size:13px;color:var(--body);line-height:1.5}
+.why p b{display:block;color:var(--ink);font-size:14px;margin-bottom:2px}
+details{border-bottom:1px solid var(--line);padding:12px 0}
+summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:14.5px;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::after{content:"+";color:var(--sub);font-weight:500}
+details[open] summary::after{content:"–"}
+details p{font-size:13.5px;margin-top:8px;color:var(--body)}
 .notes{font-size:12.5px;color:var(--sub);line-height:1.85;margin-top:10px}
 footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
 
@@ -153,6 +164,24 @@ footer{padding:22px 20px;font-size:11.5px;color:var(--sub);line-height:1.8}
     <div><b>3</b><span>到院<br>確認療程</span></div>
     <div><b>4</b><span>療程後<br>鎮靜保養</span></div>
   </div>
+</div>
+
+<div class="sec">
+  <h3>為什麼選明洞旗艦店？</h3>
+  <div class="why">
+    <div><img src="../img/hd046.jpg" alt="" loading="lazy"><p><b>明洞Apple Store旁</b>乙支路入口站6號出口，步行約100公尺</p></div>
+    <div><img src="../img/f1.jpg" alt="" loading="lazy"><p><b>1人1室 獨立療程室</b>不是流水線，從諮詢到療程都在自己的空間</p></div>
+    <div><img src="../img/d1.jpg" alt="" loading="lazy"><p><b>6位醫師駐診</b>依膚況安排1對1諮詢</p></div>
+    <div><img src="../img/hd021.jpg" alt="" loading="lazy"><p><b>中文LINE諮詢</b>預約前先把價格和療程問清楚</p></div>
+  </div>
+</div>
+
+<div class="sec">
+  <h3>常見問題</h3>
+  <details><summary>價格有包含附加稅嗎？</summary><p>所有價格不含10%附加稅，以韓元結帳。新台幣僅供參考（1 TWD ≈ 41 韓元）。2026年起韓國醫美療程已無退稅，價格請以韓元計算。</p></details>
+  <details><summary>不會韓文也可以嗎？</summary><p>可以。透過LINE用中文諮詢、預約，價格和療程內容都可以先問清楚。</p></details>
+  <details><summary>到現場會被推銷加做嗎？</summary><p>初訪優惠的內容與價格都寫在這頁。想加做其他療程，可以在諮詢時討論後再決定。</p></details>
+  <details><summary>要提早多久預約？</summary><p>最近預約較滿，建議出發前1～2週先用LINE告訴我們旅行日期。</p></details>
 </div>
 
 <div class="sec">
