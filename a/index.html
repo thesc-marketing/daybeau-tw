@@ -282,7 +282,7 @@ footer b{color:var(--body)}
     <li><b>LINE 中文諮詢</b><p>傳送正面・側面照片，告訴我們在意的地方</p></li>
     <li><b>確認療程與預約時間</b><p>配合旅行行程安排日期，當天也能逛街</p></li>
     <li><b>到院・醫師面診</b><p>醫師確認膚況後，說明最適合的療程</p></li>
-    <li><b>獨立療程室進行療程</b><p>療程後鎮靜保養，帶著好氣色繼續旅行</p></li>
+    <li><b>獨立療程室進行療程</b><p>在獨立空間完成療程，結束後繼續您的旅程</p></li>
   </ol>
 </section>
 
@@ -314,7 +314,7 @@ footer b{color:var(--body)}
 </div>
 <script>
 // 데이뷰 대만 LINE 공식계정 주소를 받으면 여기에 넣는다(예: https://lin.ee/xxxx). 비어 있으면 버튼은 안내만 띄운다.
-const LINE_URL = "";
+const LINE_URL = "https://line.me/R/ti/p/@117yaafh";
 document.querySelectorAll('[data-line]').forEach(a=>{
   if(LINE_URL){a.href=LINE_URL;a.target="_blank";a.rel="noopener";return;}
   a.addEventListener('click',e=>{e.preventDefault();const t=document.getElementById('toast');t.classList.add('on');setTimeout(()=>t.classList.remove('on'),1600);});
