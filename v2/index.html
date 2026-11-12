@@ -151,20 +151,46 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
 .opt .c{display:block;font-size:12.5px;color:#9a3f12;margin-top:4px}
 .opt::after{content:"";position:absolute;right:14px;top:16px;width:18px;height:18px;border-radius:50%;border:1.5px solid #c9ced3}
 .opt.on::after{border:5px solid var(--accent)}
+
+/* 표지 공통: 원화 가격, 별점 */
+.krw{font-size:28px;font-weight:900;color:var(--ink);letter-spacing:-.02em;line-height:1.1;white-space:nowrap}
+.krw em{font-style:normal;font-weight:700;font-size:.55em;margin-left:2px}
+.star{display:inline-flex;align-items:baseline;gap:4px;font-size:17px;font-weight:900;color:var(--ink);white-space:nowrap}
+.star i{font-style:normal;color:#f2a900}
+.star small{font-size:11.5px;font-weight:500;color:var(--sub);margin-left:3px}
+
+/* 시안 B: 얼굴 클로즈업 + 아래 왼쪽 명조 제목, 숫자는 사진 밑 띠로 */
+.vb>img{object-fit:cover}
+.vb::after{height:42%;background:linear-gradient(transparent,rgba(28,26,25,.6))}
+.vb .copy{top:auto;bottom:22px;left:22px;color:#fff}
+.vb h1{font-family:var(--serif);font-size:clamp(25px,7.2vw,31px);line-height:1.38;color:#fff;font-weight:700;margin:0}
+.vb .copy p{font-size:12.5px;letter-spacing:.06em;margin-top:8px;opacity:.9}
+.vb .ai{bottom:auto;top:12px}
+.strip{display:grid;grid-template-columns:.7fr 1.5fr 1fr;border-bottom:1px solid var(--line)}
+.strip>div{padding:12px 8px 13px;text-align:center;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.strip>div+div{border-left:1px solid var(--line)}
+.strip small{display:block;font-size:11px;color:var(--sub);margin-bottom:3px}
+.strip>div>b{font-size:22px;font-weight:900;color:var(--accent);line-height:1.2}
+.strip .krw{font-size:20px;color:var(--ink)}
+.strip .star{font-size:20px;line-height:1.2}
 </style>
 </head>
 <body><div style="position:relative;z-index:99;background:#111;color:#fff;text-align:center;font:600 12.5px/1.4 sans-serif;padding:7px 10px">審閱用草稿・尚未上線・含AI生成圖片</div>
 <div class="wrap">
 <header class="top"><img src="img/logo.png" alt="DayBeau Clinic"><span>明洞旗艦店・初訪限定</span></header>
 
-<div class="visual">
-  <img id="v-img" src="img/lift.jpg" alt="">
+<div class="visual vb">
+  <img id="v-img" data-fixed="1" src="img/hero_b.jpg" alt="">
   <span class="ai">AI生成示意圖</span>
   <div class="copy">
-    <span class="pill" id="v-pill">限時優惠・首爾明洞</span>
-    <h1 id="v-h1">綁起高馬尾的時候，<br>下顎線還在嗎？</h1>
+    <h1 id="v-h1"></h1>
+    <p id="v-pill">首爾明洞 初訪限定</p>
   </div>
-  <div class="big" id="v-big">99萬<small>韓元</small></div>
+</div>
+<div class="strip">
+  <div><small>折扣</small><b>49%</b></div>
+  <div><small>初訪優惠價</small><b class="krw" data-now>990,000<em>韓元</em></b></div>
+  <div><small>Creatrip 160則</small><span class="star"><i aria-hidden="true">★</i> 4.9</span></div>
 </div>
 
 <div class="head">
