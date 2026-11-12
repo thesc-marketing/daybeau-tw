@@ -108,6 +108,8 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
 .evbox .row b{color:var(--ink);white-space:nowrap}
 .evbox .row s{color:var(--sub);font-weight:500}
 .evbox .row.hit b{color:var(--accent)}
+.evbox .row.off b{color:var(--accent);font-weight:600}
+.evbox .row.hit{border-top:1px dashed rgba(0,0,0,.15);margin-top:4px;padding-top:7px}
 .evbox small{display:block;font-size:11.5px;color:var(--sub);margin-top:6px}
 .kw{margin-top:12px}
 .kw li{list-style:none;display:flex;align-items:baseline;gap:10px;padding:8px 0;border-bottom:1px solid var(--line)}
@@ -203,8 +205,8 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
   <div class="vat">不含10%附加稅・以韓元結帳</div>
   <div class="evbox">
     <div class="row"><span>原價</span><b><s id="e-was">1,950,000韓元</s></b></div>
+    <div class="row off"><span>初訪折扣（49%）</span><b id="e-save">−960,000韓元</b></div>
     <div class="row hit"><span>初訪優惠價</span><b id="e-now">990,000韓元</b></div>
-    <div class="row"><span>現省</span><b id="e-save">960,000韓元（49%）</b></div>
     <small>限時優惠，可能提前結束，請先用LINE告訴我們您的日期。</small>
   </div>
   <div class="cond" id="h-cond" hidden></div>
@@ -389,7 +391,7 @@ function render(k, top){
     set("n-extra", d.extra, 1);
   }
   set("h-name", d.name); set("h-now", d.now + "<em>韓元</em>", 1);
-  set("e-was", d.was + "韓元"); set("e-now", d.now + "韓元"); set("e-save", d.save + "韓元（49%）");
+  set("e-was", d.was + "韓元"); set("e-now", d.now + "韓元"); set("e-save", "−" + d.save + "韓元");
   const c = $("h-cond"); c.hidden = !d.cond; c.innerHTML = d.cond;
   set("b-name", d.short); set("b-price", d.now + "韓元");
   // 표지 시안(a·b·c)의 가격 자리
