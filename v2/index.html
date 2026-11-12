@@ -332,7 +332,7 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
 </div>
 <script>
 // 광고별 링크: ?t=lift | onda | potenza (대만 광고에 이미 걸린 값 그대로)
-const LINE_URL = "https://line.me/R/ti/p/@117yaafh";
+const LINE_URL = "https://line.me/R/oaMessage/%40117yaafh/?";  // 친구 추가 화면 말고 대화창으로 바로(문구 미리 채움)
 const D = {
   lift:{
     img:"img/lift.jpg", pos:"50% 62%", pill:"拉提・首爾明洞 初訪限定", h1:"綁起高馬尾的時候，<br>下顎線還在嗎？", big:"99萬",
@@ -412,7 +412,9 @@ document.querySelectorAll(".opt").forEach(o => o.addEventListener("click", () =>
 render(cur, true);
 
 document.querySelectorAll("[data-line]").forEach(a => {
-  if(LINE_URL){ a.href = LINE_URL; a.target = "_blank"; a.rel = "noopener"; return; }
+  if(LINE_URL){ a.href = LINE_URL; a.target = "_blank"; a.rel = "noopener";
+    a.addEventListener("click", () => { a.href = LINE_URL + encodeURIComponent("你好，我想諮詢「" + $("b-name").textContent.trim() + "」"); });
+    return; }
   a.addEventListener("click", e => { e.preventDefault(); const t = $("toast"); t.classList.add("on"); setTimeout(() => t.classList.remove("on"), 1600); });
 });
 </script>
