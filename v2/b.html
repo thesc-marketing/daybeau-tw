@@ -43,6 +43,10 @@ button{font-family:inherit}
 .vat{font-size:12.5px;color:var(--sub);margin-top:2px}
 .cond{margin-top:12px;background:var(--accent-bg);color:#9a3f12;border-radius:8px;padding:10px 12px;font-size:13.5px;font-weight:500;line-height:1.6}
 .badges{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.hours{margin-top:14px;border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:flex;gap:12px;align-items:center}
+.hours b{flex:0 0 auto;font-size:13px;color:#fff;background:var(--line-green);border-radius:6px;padding:4px 8px}
+.hours p{font-size:13px;color:var(--body);line-height:1.5}
+.hours strong{font-size:16px;color:var(--ink)}
 .badges span{font-size:12px;color:var(--body);background:var(--soft);border-radius:6px;padding:3px 8px}
 .sec{padding:26px 20px;border-bottom:8px solid var(--soft)}
 .sec h3{font-size:17px;color:var(--ink);font-weight:700}
@@ -206,7 +210,7 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
   </div>
   <div class="cond" id="h-cond" hidden></div>
   <a class="rate" href="https://creatrip.com/zh-TW/spot/15274" target="_blank" rel="noopener"><i aria-hidden="true">★★★★★</i><b>4.9</b><span>Creatrip 160則評價</span></a>
-  <div class="badges"><span>每人限購一次</span><span>1人獨立療程室</span><span>中文LINE諮詢</span></div>
+  <div class="badges"><span>每人限購一次</span><span>1人獨立療程室</span><span>中文LINE諮詢・全年無休</span></div>
 </div>
 
 <div class="sec">
@@ -277,7 +281,8 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
     <div><b>3</b><span>到院<br>確認療程</span></div>
     <div><b>4</b><span>療程結束<br>繼續旅程</span></div>
   </div>
-  <p class="s" style="margin-top:12px">最近預約較滿，建議出發前1～2週先用LINE告訴我們旅行日期。</p>
+  <div class="hours"><b>LINE 諮詢時間</b><p><strong>每天 09:00–19:00</strong><br>台灣時間・全年無休，週日也回覆</p></div>
+  <p class="s" style="margin-top:12px">最近預約較滿，建議出發前1～2週先用LINE告訴我們旅行日期。諮詢時間外留言，隔天依序回覆。</p>
 </div>
 
 <div class="sec">
@@ -293,7 +298,7 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
   <div class="place">
     <img src="img/lounge.jpg" alt="" loading="lazy">
     <div><b>DAYBEAU 明洞旗艦店</b>
-      <p>首爾市中區南大門路84 Hyde Park大樓（Apple 明洞）B1<br>週一～五 10:00–20:00・週六日 10:00–19:00</p></div>
+      <p>首爾市中區南大門路84 Hyde Park大樓（Apple 明洞）B1<br>看診：週一～五 10:00–20:00・週六日 10:00–19:00（韓國時間）</p></div>
   </div>
   <div class="map"><iframe src="https://maps.google.com/maps?q=37.5646,126.9826&amp;z=17&amp;hl=zh-TW&amp;output=embed" title="地圖：DAYBEAU 明洞旗艦店" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
   <ul class="near">
@@ -337,8 +342,8 @@ const D = {
     incl:["ONDA 微波拉提 40KJ","美國極線音波 300發","療程前與醫師諮詢，依膚況安排部位"],
     worry:["下顎線變模糊、臉頰開始往下掉","想一次做好深層拉提和臉部緊緻","趁來首爾旅行，想做一次像樣的拉提"],
     ah:"拉提組合 4個重點", as:"下顎線・臉頰下垂・緊緻",
-    kw:[["下顎線","拉回俐落輪廓"],["臉頰下垂","深層拉提＋緊緻一次做"],["不用開刀","沒有傷口"],["做完就能逛街","幾乎沒有恢復期"]],
-    aimg:"img/treat.jpg", ap:"兩種拉提一次做完，深層拉提和緊緻一起顧到。實際部位到院由醫師依膚況安排。",
+    kw:[["下顎線","一次拉回V臉"],["臉頰下垂","深層＋表層 雙重拉提"],["不開刀","零傷口"],["零恢復期","做完直接逛明洞"]],
+    aimg:"img/treat.jpg", ap:"美國極線音波拉深層，ONDA 收緊輪廓，下顎線和臉頰一次拉回來。做完直接去逛明洞。",
     extra:""
   },
   onda:{
@@ -349,8 +354,8 @@ const D = {
     incl:["ONDA 微波拉提 10KJ","優惠價最多可加購至 30KJ","療程前與醫師諮詢"],
     worry:["臉頰肉多、輪廓看起來不夠俐落","第一次做拉提，想先從小劑量開始","不想要太長的恢復期"],
     ah:"ONDA 4個重點", as:"雙下巴・臉頰肉・輪廓線",
-    kw:[["雙下巴、臉頰肉","輪廓更俐落"],["痛感低","第一次做也OK"],["幾乎沒有恢復期","做完就能逛街"],["初訪優惠價","39,000韓元"]],
-    aimg:"img/treat.jpg", ap:"第一次做拉提，可以從 10KJ 小劑量開始，優惠價最多可加購至 30KJ。實際療程到院由醫師確認。",
+    kw:[["雙下巴、臉頰肉","一次收進去"],["不痛","不用敷麻藥"],["零恢復期","做完直接逛明洞"],["初訪優惠價","39,000韓元"]],
+    aimg:"img/treat.jpg", ap:"不痛、不用休息，第一次做拉提也不用怕。先從 10KJ 開始，優惠價最多可加購至 30KJ。",
     extra:"・ONDA 優惠價最多適用至30KJ，超過部分以原價（每10KJ 77,000韓元）計算<br>"
   },
   potenza:{
@@ -360,8 +365,8 @@ const D = {
     incl:["黃金微針 N探頭（已含探頭費用）","JUVELOOK 水光 2CC","療程前與醫師諮詢"],
     worry:["毛孔粗大、膚質不平滑","上妝容易卡粉、皮膚沒有光澤","旅行中想好好做一次膚質管理"],
     ah:"膚質組合 4個重點", as:"毛孔・膚質・光澤",
-    kw:[["毛孔","看起來更細緻"],["膚質","上妝不卡粉"],["水光感","JUVELOOK 2CC"],["初訪優惠價","190,000韓元・含探頭費"]],
-    aimg:"img/consult.jpg", ap:"黃金微針顧毛孔和膚質，再加 JUVELOOK 水光補光澤。實際療程到院由醫師確認。",
+    kw:[["毛孔","肉眼可見變細緻"],["膚質","上妝服貼不卡粉"],["水光肌","JUVELOOK 打出光澤"],["初訪優惠價","190,000韓元・含探頭費"]],
+    aimg:"img/consult.jpg", ap:"黃金微針收毛孔、救膚質，JUVELOOK 水光補滿光澤，一次做好整張臉。",
     extra:""
   }
 };
