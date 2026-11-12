@@ -322,7 +322,7 @@ a:focus-visible,summary:focus-visible,.opt:focus-visible{outline:3px solid #155e
 const LINE_URL = "https://line.me/R/ti/p/@117yaafh";
 const D = {
   lift:{
-    img:"img/lift.jpg", pos:"50% 30%", pill:"拉提・首爾明洞 初訪限定", h1:"綁起高馬尾的時候，<br>下顎線還在嗎？", big:"99萬",
+    img:"img/lift.jpg", pos:"50% 62%", pill:"拉提・首爾明洞 初訪限定", h1:"綁起高馬尾的時候，<br>下顎線還在嗎？", big:"99萬",
     name:"[初訪限定] ONDA 40KJ ＋ 美國極線音波 300發", short:"ONDA 40KJ＋美國極線音波 300發",
     now:"990,000", was:"1,950,000", save:"960,000", cond:"",
     incl:["ONDA 微波拉提 40KJ","美國極線音波 300發","療程前與醫師諮詢，依膚況安排部位"],
@@ -333,7 +333,7 @@ const D = {
     extra:""
   },
   onda:{
-    img:"img/onda.jpg", pos:"50% 40%", pill:"ONDA 微波拉提 初訪限定", h1:"臉頰肉肉的，<br>拍照總要找側臉？", big:"3.9萬",
+    img:"img/onda.jpg", pos:"50% 60%", pill:"ONDA 微波拉提 初訪限定", h1:"臉頰肉肉的，<br>拍照總要找側臉？", big:"3.9萬",
     name:"[初訪限定] ONDA 微波拉提 10KJ", short:"ONDA 微波拉提 10KJ",
     now:"39,000", was:"77,000", save:"38,000",
     cond:"優惠價最多可加購至30KJ（30KJ＝117,000韓元）<br>超過30KJ的部分以原價計算（每10KJ 77,000韓元）",
@@ -345,7 +345,7 @@ const D = {
     extra:"・ONDA 優惠價最多適用至30KJ，超過部分以原價（每10KJ 77,000韓元）計算<br>"
   },
   potenza:{
-    img:"img/glow.jpg", pos:"50% 45%", pill:"毛孔・膚質 初訪限定", h1:"毛孔大到<br>上妝會卡粉？", big:"19萬",
+    img:"img/glow.jpg", pos:"50% 62%", pill:"毛孔・膚質 初訪限定", h1:"毛孔大到<br>上妝會卡粉？", big:"19萬",
     name:"[初訪限定] 黃金微針 N探頭 ＋ JUVELOOK水光 2CC", short:"黃金微針 N探頭＋JUVELOOK水光 2CC",
     now:"190,000", was:"370,000", save:"180,000", cond:"",
     incl:["黃金微針 N探頭（已含探頭費用）","JUVELOOK 水光 2CC","療程前與醫師諮詢"],
@@ -357,7 +357,7 @@ const D = {
   }
 };
 const MORE = [["咀嚼肌肉毒 50U","9,900"],["臉部減脂注射 3CC","9,900"],["皮秒雷射","19,000"],["鈦提升 10KJ","49,000"]];
-const ORDER = ["lift","onda","potenza"];
+const ORDER = ["onda","potenza","lift"];   // 가격 낮은 순(3.9만·19만·99만)
 let cur = new URLSearchParams(location.search).get("t");
 if(!D[cur]) cur = "lift";
 const $ = id => document.getElementById(id);
@@ -387,7 +387,7 @@ function render(k, top){
     + MORE.map(([n, p]) => `<tr><td>${n}</td><td>${p}韓元</td></tr>`).join("");
   document.querySelectorAll(".opt").forEach(o => { const on = o.dataset.k === k; o.classList.toggle("on", on); o.setAttribute("aria-pressed", String(on)); });
 }
-$("opts").innerHTML = [cur, ...ORDER.filter(k => k !== cur)].map((k, i) => {
+$("opts").innerHTML = ORDER.map((k, i) => {
   const d = D[k];
   return `<button type="button" class="opt" data-k="${k}" aria-pressed="false"><span class="n">方案 ${i + 1}</span><b>${d.short}</b>
   <span class="p"><i>49%</i><strong>${d.now}韓元</strong><s>${d.was}韓元</s></span>${d.cond ? '<span class="c">優惠價最多可加購至30KJ</span>' : ""}</button>`;
